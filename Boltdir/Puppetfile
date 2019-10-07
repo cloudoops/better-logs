@@ -1,0 +1,9 @@
+
+forge 'forge.puppetlabs.com'
+
+## Forge Modules: Common
+mod 'puppetlabs/stdlib', '4.25.1'
+mod 'puppetlabs/concat', '4.1.1'
+mod 'puppetlabs/inifile', '1.5.0'
+mod 'puppet-splunk', '7.1.0'
+mod 'puppetlabs-splunk_hec', '0.7.1'
