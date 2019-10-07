@@ -1,0 +1,8 @@
+{    
+    "description": "test what params are passed to task",
+    "implementations": [
+        { "name": "rhel_echo.rb", "requirements": ["shell"] },
+        { "name": "windows_echo.rb", "requirements": ["powershell"] },
+        { "name": "remote_echo.rb", "requirements": ["remote"] }
+    ]
+}

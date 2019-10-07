@@ -1,0 +1,4 @@
+{
+    "input_method": "stdin",
+    "files": ["test/files/colorize.rb", "test/files/template.rb"]
+}
