@@ -1,0 +1,46 @@
+version: 2 
+
+groups:
+  - name: remote-task-servers
+    targets:
+    - name: 
+      uri: 
+      config:
+        transport: remote
+        remote: 
+          user: 
+          password: 
+      features: ['remote']    
+    - name: fake
+      uri: https://nets.s.com
+      config:
+        transport: remote
+        remote:
+          user: admin
+          password: admin 
+      features: ['remote'] 
+    config:
+      ssh:
+        host-key-check: false
+        tty: true
+        tmpdir: ''
+        user: root
+        password:
+        run-as: root
+targets: 
+  - name: splunk_bolt_hec
+    config:
+      transport: remote
+      remote:
+        hostname: 
+        token: 
+        port: 
+
+          # Change these plugins to pkcs7 if you'd like to encrypt the password instead of having it prompt.
+          # bolt secret createkeys (if you haven't already)
+          # bolt secret encrypt <password>
+          # example:
+          # _plugin: pkcs7
+          # encrypted-value: ENC[PKCS7,MIIBeQYJKoZIhvcN.........GIBQTgBASoTZ59lUa1VH21bMsZODX]
+          #_plugin: pkcs7
+          #encrypted-value: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAwsUTpdTTf0gP2/Xedt706u8dJrD1gCYDYUm4z8bLWvo84LyGFxXbpcPOSm7nyqh46YMOnfsl2n0wTbdu+XS9WmuNTP+JOl5QWvO+QILDm++C+dhfi7X2tPDot3qA5RRAxt/o6CJ+8OrJmg4QfKl+vOBwEX5nBItuHASx8Nlz3VqMljwfmnVe3IPNla+WANYTSvSuBhvHp7jMRMmyXSmCzLeQu9epzID+daD8BJX/f6twBj4Thkp8JtzHGMeT2L9fCIqsNicJycRbfkq3Us5CgxmV1NQtxBJ/p2rp0ExejieY9A/u08m3pqCgYClNodPP9I6sl6tijUtwqhXJOqJ+bTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD0Z6CFWLyuLoDkDMNoTm4xgBAztICEuV7AaIq1JgTRhUUZ]
