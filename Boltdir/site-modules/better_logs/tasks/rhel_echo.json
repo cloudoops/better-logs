@@ -1,4 +1,5 @@
 {
     "input_method": "stdin",
-    "files": ["test/files/colorize.rb", "test/files/template.rb"]
+    "files": ["test/files/colorize.rb", "test/files/template.rb"],
+    "description": "tests a templatized bolt task by using an echo command on rhel systems"
 }
