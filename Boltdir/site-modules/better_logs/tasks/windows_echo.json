@@ -1,0 +1,5 @@
+{
+    "input_method": "stdin",
+    "files": ["test/files/colorize.rb", "test/files/template.rb"],
+    "description": "tests a templatized bolt task by using a Write-Content command on windows systems"
+}
