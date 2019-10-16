@@ -1,0 +1,11 @@
+concurrency: 10
+format: human
+winrm: 
+  interpreters:
+     rb: 'C:\Program Files\Puppet Labs\Puppet\puppet\bin'
+log:
+  console:
+    level: warn
+  ~/.bolt/debug.log:
+    level: debug
+    append: True
